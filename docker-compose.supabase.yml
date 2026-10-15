@@ -1,0 +1,24 @@
+version: "3.9"
+
+# ── Supabase override ─────────────────────────────────────────────────────────
+# Use when you want to point the API at your Supabase DB instead of local Postgres.
+#
+# Usage:
+#   Add to .env:
+#     DB_CONNECTION=Host=...supabase.com;Port=5432;Database=postgres;Username=...;Password=...;SSL Mode=Require;Trust Server Certificate=true
+#
+#   Then run:
+#     docker compose -f docker-compose.yml -f docker-compose.supabase.yml up --build
+# ─────────────────────────────────────────────────────────────────────────────
+
+services:
+
+  # Disable local postgres — not needed with Supabase
+  db:
+    profiles:
+      - local-only
+
+  api:
+    depends_on: {}
+    environment:
+      ConnectionStrings__DefaultConnection: ${DB_CONNECTION}

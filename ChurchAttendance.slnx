@@ -1,0 +1,8 @@
+<Solution>
+  <Folder Name="/Solution Items/">
+    <File Path=".editorconfig" />
+  </Folder>
+  <Project Path="ChurchAttendance.API/ChurchAttendance.API.csproj" />
+  <Project Path="ChurchAttendance.Core/ChurchAttendance.Core.csproj" />
+  <Project Path="ChurchAttendance.Infrastructure/ChurchAttendance.Infrastructure.csproj" />
+</Solution>

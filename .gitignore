@@ -1,0 +1,20 @@
+# ── .NET ──────────────────────────────────────────────────────────────────────
+**/bin/
+**/obj/
+*.user
+*.suo
+.vs/
+
+# ── Secrets — NEVER commit these ─────────────────────────────────────────────
+.env
+appsettings.Development.json
+secrets.json
+**/usersecrets/
+
+# ── Docker ────────────────────────────────────────────────────────────────────
+# .env.example IS committed (template); .env is NOT
+.env
+
+# ── OS ────────────────────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
